@@ -35,8 +35,9 @@ local pointCloud = PointCloud.create('INTENSITY') -- PointCloud which contains s
 
 local scanNr = 1
 
--- Callback function to process new scans
---@handleOnNewScan(scan:Scan,sensordata:SensorData)
+---Callback function to process new scans
+---@param scan Scan
+---@param sensordata SensorData
 local function handleOnNewScan(scan)
   local phi = Scan.getPointPhi(scan, 0)
 
